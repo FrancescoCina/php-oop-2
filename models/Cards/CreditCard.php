@@ -49,7 +49,7 @@ $visa = new CreditCard('5555', '10/2025');
 // Setting number Card and catching the Exceptionù
 
 try {
-    $visa->setCardNumber('25836941');
+    echo $visa->setCardNumber('25836941');
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();
 };
@@ -60,7 +60,7 @@ echo '<br/>';
 // Setting cvv and catching the Exception
 
 try {
-    'Il Cvv della carta ' . $visa->setCardNumber('25836941') . ' è ' . $visa->setCvv('333');
+    echo 'Il Cvv della carta ' . $visa->setCardNumber('25836941') . ' è ' . $visa->setCvv('333');
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();
 };

@@ -105,8 +105,15 @@ function echoDiscountedPrice($price, $discount)
             <?= $card1->setCardNumber('14725836') ?>
             con il seguente CVV:
 
-            <?=
-            $card1->setCvv('225') ?>
+            <?php
+
+            try {
+                echo $card1->setCvv('225');
+            } catch (Exception $e) {
+                echo 'Error: ' . $e->getMessage();
+            };
+            ?>
+
 
             e scade il
 
