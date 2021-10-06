@@ -47,9 +47,6 @@ class User
         return $this->email;
     }
 
-
-
-
     public function setDiscount()
     {
         if ($this->age < 25) {
@@ -60,7 +57,7 @@ class User
     }
 
 
-    // METHODS
+    // METHODS TO PRINT
     public function echoName()
     {
         echo $this->getName();
@@ -69,7 +66,8 @@ class User
 
 $user1 = new User('Francesco', 'fra@gmail', '21');
 
-echo $user1->setEmail();
+/* echo $user1->setEmail();
 echo '<br/>';
 echo $user1->setDiscount();
 echo '<br/>';
+ */

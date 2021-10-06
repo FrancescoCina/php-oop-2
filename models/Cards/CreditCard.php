@@ -8,9 +8,9 @@ class CreditCard
 
 
     // CONSTRUCTOR
-    public function __construct($_number, $_expiration)
+    public function __construct($_expiration)
     {
-        $this->number = $_number;
+
         $this->expiration = $_expiration;
     }
 
@@ -34,6 +34,13 @@ class CreditCard
             throw new Exception('Numero carta non valido');
         }
     }
+
+    // METHODS TO PRINT
+
+    public function echoExpiration()
+    {
+        echo $this->expiration;
+    }
 }
 
 
@@ -42,7 +49,7 @@ $visa = new CreditCard('5555', '10/2025');
 // Setting number Card and catching the Exceptionù
 
 try {
-    echo $visa->setCardNumber('25836941');
+    $visa->setCardNumber('25836941');
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();
 };
@@ -53,7 +60,7 @@ echo '<br/>';
 // Setting cvv and catching the Exception
 
 try {
-    echo 'Il Cvv della carta ' . $visa->setCardNumber('25836941') . ' è ' . $visa->setCvv('333');
+    'Il Cvv della carta ' . $visa->setCardNumber('25836941') . ' è ' . $visa->setCvv('333');
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();
 };

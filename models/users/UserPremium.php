@@ -24,8 +24,15 @@ class UserPremium extends User
             return $discount = 10;
         }
     }
+
+    // METHODS TO PRINT
+
+    public function echoSeniority()
+    {
+        echo $this->seniority;
+    }
 }
 
 
 $user2 = new UserPremium('Mario', 'Rossi', '18', '15');
-echo 'lo sconto per il secondo utente è: ' . $user2->setDiscount();
+// echo 'lo sconto per il secondo utente è: ' . $user2->setDiscount();

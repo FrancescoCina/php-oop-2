@@ -28,15 +28,20 @@ class TypeProduct extends Product
 
     public function echoPrice()
     {
-        echo 'questo prodotto costa: ' . $this->getPrice() . '€';
+        echo $this->getPrice();
+    }
+
+    public function getPriceForIndex()
+    {
+        return $this->getPrice();
     }
 }
 
 $mouse = new TypeProduct('keyboard', '25', 'tech');
 
-echo $mouse->echoName();
+/* echo $mouse->echoName();
 echo '<br/>';
 $mouse->echoType();
 echo '<br/>';
 
-$mouse->echoPrice();
+$mouse->echoPrice(); */
