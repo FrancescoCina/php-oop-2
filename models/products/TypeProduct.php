@@ -28,12 +28,12 @@ class TypeProduct extends Product
 
     public function echoPrice()
     {
-        echo $this->getPrice();
+        echo parent::getPrice();
     }
 
     public function getPriceForIndex()
     {
-        return $this->getPrice();
+        return parent::getPrice();
     }
 }
 

@@ -32,7 +32,6 @@ class User
     {
         return $this->email;
     }
-
     protected function getAge()
     {
         return $this->age;
